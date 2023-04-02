@@ -1,5 +1,6 @@
 # We strongly recommend using the required_providers block to set the
 # Azure Provider source and version being used
+#Código alterado para Poc-FileServer - Erick Medeiros
 terraform {
   required_providers {
     azurerm = {
@@ -144,8 +145,8 @@ resource "azurerm_windows_virtual_machine" "vm-ad" {
   resource_group_name = azurerm_resource_group.rg-base.name
   location            = azurerm_resource_group.rg-base.location
   size                = "Standard_B2s"
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = "admin.azure"
+  admin_password      = "A1qa2ws3ed4rf5tg"
   network_interface_ids = [
     azurerm_network_interface.nic-ad.id,
   ]
@@ -196,8 +197,8 @@ resource "azurerm_windows_virtual_machine" "vm-fs" {
   resource_group_name = azurerm_resource_group.rg-base.name
   location            = azurerm_resource_group.rg-base.location
   size                = "Standard_B2s"
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = "admin.azure"
+  admin_password      = "A1qa2ws3ed4rf5tg"
   network_interface_ids = [
     azurerm_network_interface.nic-fs.id,
   ]
@@ -263,8 +264,8 @@ resource "azurerm_windows_virtual_machine" "vm-fw" {
   resource_group_name = azurerm_resource_group.rg-base.name
   location            = azurerm_resource_group.rg-base.location
   size                = "Standard_B2s"
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = "admin.azure"
+  admin_password      = "A1qa2ws3ed4rf5tg"
   network_interface_ids = [
     azurerm_network_interface.nic-fw.id,
   ]
@@ -312,8 +313,8 @@ resource "azurerm_windows_virtual_machine" "vm-dns" {
   resource_group_name = azurerm_resource_group.rg-base.name
   location            = "Central US"
   size                = "Standard_B2s"
-  admin_username      = "adminuser"
-  admin_password      = "P@$$w0rd1234!"
+  admin_username      = "admin.azure"
+  admin_password      = ""
   network_interface_ids = [
     azurerm_network_interface.nic-dns.id,
   ]
